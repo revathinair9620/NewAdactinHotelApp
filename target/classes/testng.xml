@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Adactin Hotel app Test Suite">
+	<test name="Adactin Hotel app Test Cases">
+		<classes>
+			<class name="com.adactinhotel.qa.testcases.LoginPageTest"></class>
+			<class name="com.adactinhotel.qa.testcases.SearchHotelTest"></class>
+			<class name="com.adactinhotel.qa.testcases.SelectHotelPageTest"></class>
+			<class name="com.adactinhotel.qa.testcases.BookAHotelPageTest"></class>
+			<class name="com.adactinhotel.qa.testcases.BookingConfirmationPageTest"></class>
+			
+		</classes>
+	</test>
+</suite>
