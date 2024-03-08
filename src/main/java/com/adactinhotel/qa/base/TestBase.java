@@ -24,8 +24,8 @@ public class TestBase {
 	public TestBase(){
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream("C:\\Users\\Sam\\eclipse-workspace\\AdactinHotel\\src\\main\\java\\com\\adactinhotel\\"
-					+ "qa\\config\\config.properties"); //loc of config prop file
+			FileInputStream ip = new FileInputStream("C:\\Users\\Sam\\eclipse-workspace\\AdactinHotelwebsite\\src\\main\\java\\com\\"
+					+ "adactinhotel\\qa\\config\\config.properties"); //loc of config prop file
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -36,12 +36,14 @@ public class TestBase {
 	
 	
 	@SuppressWarnings("deprecation")
-	public static void initialization(){
+	public static void initialization()
+	{
 		String browserName = prop.getProperty("browser");	
 		
 		if(browserName.equals("chrome")){
 			System.setProperty("webdriver.chrome.driver", "C:\\browserdrivers\\chromedriver.exe");	
-			driver = new ChromeDriver(); 
+			driver = new ChromeDriver();
+			
 		}
 		else if(browserName.equals("FF")){
 			System.setProperty("webdriver.gecko.driver", "C:\\browserdrivers\\chromedriver.exe");	
@@ -55,6 +57,13 @@ public class TestBase {
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("url"));
+		
+		try {
+			TestUtil.takeScreenshotAtEndOfTest();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 }

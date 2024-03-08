@@ -10,7 +10,7 @@ public class LoginPage extends TestBase {
 
 	// pagefactory OR
 
-	@FindBy(xpath = "//*[@id=\"username\"]")
+	@FindBy(xpath = "//*[@id=\"username1\"]")
 	WebElement username;
 
 	@FindBy(xpath = "//*[@id=\"password\"]")

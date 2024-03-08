@@ -3,7 +3,6 @@ package com.adactinhotel.qa.testcases;
 import com.adactinhotel.qa.base.TestBase;
 import com.adactinhotel.qa.pages.LoginPage;
 import com.adactinhotel.qa.pages.SearchHotelPage;
-
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -12,6 +11,7 @@ import org.testng.annotations.Test;
 public class LoginPageTest extends TestBase {
 	LoginPage loginPage;
 	SearchHotelPage searchHotelPage;
+	
 
 	public LoginPageTest() {
 		super(); // call the test base class constructor
