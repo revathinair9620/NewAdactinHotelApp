@@ -23,6 +23,14 @@ public class SearchHotelPage extends TestBase {
 
 	@FindBy(xpath = "//input[@id='Submit']")
 	WebElement submitBtn;
+	
+	@FindBy(xpath = "//*[@id=\"datepick_in\"]")
+	WebElement checkInDate;
+	
+	@FindBy(xpath = "//*[@id=\"datepick_out\"]")
+	WebElement checkOutDate;
+	
+	
 
 	// Initializing the Page Objects:
 	public SearchHotelPage() {
@@ -50,6 +58,14 @@ public class SearchHotelPage extends TestBase {
 	public void select_roomtypeviadropdown() {
 		Select roomtypes = new Select(roomtype);
 		roomtypes.selectByIndex(1);
+	}
+	
+	public void enterdate(String checkindate, String checkoutdate) {
+		checkInDate.clear();
+		checkInDate.sendKeys(checkindate);
+		checkOutDate.clear();
+		checkOutDate.sendKeys(checkoutdate);
+		
 	}
 
 	public SelectHotelPage submit() {
